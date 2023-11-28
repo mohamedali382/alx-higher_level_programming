@@ -1,22 +1,19 @@
-#include"lists.h"
-
+#include "lists.h"
 /**
- * check_cycle - check if this list is cycle
+ * check_cycle - check if the list has a cycle
  * @list: the list to be checked
- * Return: 0 or 1
-*/
-
+ * Return: 0 if no cycle, 1 otherwise
+ */
 int check_cycle(listint_t *list)
 {
-	listint_t *first, *second;
+	listint_t *fast, *slow;
 
-	second = first = list;
-
-	while (first && first->next && second->next)
+	slow = fast = list;
+	while (fast && fast->next && slow->next)
 	{
-		second = second->next;
-		first = first->next->next;
-		if (first == second)
+		slow = slow->next;
+		fast = fast->next->next;
+		if (slow == fast)
 			return (1);
 	}
 	return (0);
