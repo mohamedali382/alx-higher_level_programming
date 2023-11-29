@@ -9,5 +9,5 @@ for i in range(1,101):
   elif i%5 == 0:
       if i < 100:
         print("Buzz",end = " ")
-    else:
+      else:
         print("Buzz",end = " $")
