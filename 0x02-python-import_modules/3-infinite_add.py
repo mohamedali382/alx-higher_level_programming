@@ -5,4 +5,4 @@ if __name__ == "__main__":
     sumation = 0
     for i in range (1, len(argv)):
         sumation += int(argv[i])
-    print(sumation, end"\n")
+    print(sumation, end="\n")
