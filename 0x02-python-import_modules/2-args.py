@@ -4,7 +4,7 @@ from sys import argv
 if __name__ == "__main__":
     print(len(argv) - 1, end=" ")
     if len(argv) == 2:
-        print("arguments:")
+        print("argument:")
     else:
         print("arguments", end="")
         if len(argv) == 1:
